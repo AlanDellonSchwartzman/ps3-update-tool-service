@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import getUpdateUrl from './utils/getUpdateUrl';
+require('dotenv').config()
 
 const app = express();
 app.use(express.json());
@@ -21,6 +22,8 @@ app.get('/', async (req, res) => {
   return res.status(200).send(updates);
 });
 
-app.listen(8080, () => {
-  console.log('Running...');
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, () => {
+  console.log(`Runing in PORT ${PORT}...`);
 });

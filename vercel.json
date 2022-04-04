@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "name": "ps3-update-tool-service",
+  "builds": [{ "src": "dist/index.js", "use": "@vercel/node" }]
+}
